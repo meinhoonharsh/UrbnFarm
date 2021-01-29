@@ -205,7 +205,7 @@
 
                <small class="text-uppercase">Order on WhatsApp from</small>
 
-               <h1 class='title has-text-black'>The Fresh Vegetable</h1>
+               <h1 class='title has-text-black'>Urbn Farm</h1>
                <h2 class='subtitle has-text-grey-light'>Shivaji Nagar Bhopal</h2>
 
             </div>
@@ -369,11 +369,36 @@ $g = 'piece';
                                                    <div class="form-group">
                                                       <select class="form-control" required="" name="my-item-qty">
                                                          <option value="">Select Qtty</option>
-                                                         
+                                                         ';
 
-                                                         <option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>
-                                                         <option value="0.50">500'.$g.' @ '.($row['ourprice']/2).'</option>
-                                                         <option value="1">1 '.$kg.' @ '.($row['ourprice']).'</option>
+                                                        if($row['kgunit']=='kg'){
+
+                                                            if($row['min']==50){
+
+                                                           echo '<option value="0.05">50'.$g.' @ '.($row['ourprice']/20).'</option>';
+                                                           echo '<option value="0.1">100'.$g.' @ '.($row['ourprice']/10).'</option>';
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                            if($row['min']==100){
+
+                                                           echo '<option value="0.1">100'.$g.' @ '.($row['ourprice']/10).'</option>';
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                         if($row['min']==250){
+
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                            if($row['min']==500){
+
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                        
+                                                      
+                                                      }
+                                                         echo '<option value="1">1 '.$kg.' @ '.($row['ourprice']).'</option>
                                                          <option value="2">2 '.$kg.' @ '.($row['ourprice']*2).'</option>
                                                          <option value="3">3 '.$kg.' @ '.($row['ourprice']*3).'</option>
                                                          <option value="4">4 '.$kg.' @ '.($row['ourprice']*4).'</option>
@@ -522,13 +547,10 @@ $g = 'piece';
             $g = 'g';
          }else if($row['kgunit']=='bunch'){
 $kg = '(bunch/गुच्छा)';
-$g = '(bunch/गुच्छा)';
          }else if($row['kgunit']=='packet'){
 $kg = 'packet';
-$g = 'packet';
          }else if($row['kgunit']=='piece'){
 $kg = 'piece';
-$g = 'piece';
          }
 
 
@@ -556,10 +578,36 @@ $g = 'piece';
                                                    <div class="form-group">
                                                       <select class="form-control" required="" name="my-item-qty">
                                                          <option value="">Select Qtty</option>
-                                                         
+                                                         ';
 
-                                                         <option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>
-                                                         <option value="0.50">500'.$g.' @ '.($row['ourprice']/2).'</option>
+                                                        if($row['kgunit']=='kg'){
+
+                                                            if($row['min']==50){
+
+                                                           echo '<option value="0.05">50'.$g.' @ '.($row['ourprice']/20).'</option>';
+                                                           echo '<option value="0.1">100'.$g.' @ '.($row['ourprice']/10).'</option>';
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                            if($row['min']==100){
+
+                                                           echo '<option value="0.1">100'.$g.' @ '.($row['ourprice']/10).'</option>';
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                         if($row['min']==250){
+
+                                                           echo '<option value="0.25">250'.$g.' @ '.($row['ourprice']/4).'</option>';
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                            if($row['min']==500){
+
+                                                           echo '<option value="0.5">500'.$g.' @ '.($row['ourprice']/2).'</option>';
+                                                            }
+                                                        
+                                                      
+                                                      }
+                                                         echo '
                                                          <option value="1">1 '.$kg.' @ '.($row['ourprice']).'</option>
                                                          <option value="2">2 '.$kg.' @ '.($row['ourprice']*2).'</option>
                                                          <option value="3">3 '.$kg.' @ '.($row['ourprice']*3).'</option>
@@ -642,7 +690,7 @@ $g = 'piece';
                         <?php
           
           
-    $sql3 = "SELECT * FROM `address`";
+    $sql3 = "SELECT * FROM `address` ORDER BY colony";
     $result3 = mysqli_query($conn, $sql3);
 
     
@@ -650,7 +698,7 @@ $g = 'piece';
     if (mysqli_num_rows($result3) > 0) {
 
       while($row = mysqli_fetch_assoc($result3)) {
-      echo '<option value="'.$row['id'].'">'.$row['colony'].'</option>';
+      echo '<option value="'.$row['colony'].'">'.$row['colony'].'</option>';
 
 
       }
@@ -675,7 +723,7 @@ $g = 'piece';
                      <input type="text" name="cust_addr" required="" class="form-control">
                   </div>
                   <div class="form-group">
-                     <textarea class="form-control" placeholder="Extra Note For Gram Hat Team" name="remark" cols="7"
+                     <textarea class="form-control" placeholder="Extra Note For Urbn Farm Team" name="remark" cols="7"
                         rows="5"></textarea>
                   </div>
                </div>
@@ -745,7 +793,7 @@ $g = 'piece';
       var name = document.forms["myform" + s]["my-item-name"].value;
       var price = document.forms["myform" + s]["my-item-price"].value;
       var qty = document.forms["myform" + s]["my-item-qty"].value;
-      alert("ID: " + id + "\nName: " + name + "\nPrice: " + price + "\nQuantity: " + qty);
+      // alert("ID: " + id + "\nName: " + name + "\nPrice: " + price + "\nQuantity: " + qty);
       // orders = orders.concat([id,name,price,qty]);
 
       console.log("VAlidation " + orderid.includes(id));
@@ -782,16 +830,16 @@ $g = 'piece';
          body.innerHTML += "<tr><th>No.</th><th>Product</th><th>Price</th><th>Quantity</th><th></th></tr>";
 
          orders.forEach(myFunction);
-         body.innerHTML += "<tr><td></td><td>Total Price : </td><td><i class='fa fa-inr'></i> " + totalPrice +
-            "</td></tr>";
-         body.innerHTML += "<tr><td></td><td>Total Weight : </td><td>" + totalWeight + " Kg</td></tr>";
+         body.innerHTML += "<tr><td>--</td><td>Total : </td><td><i class='fa fa-inr'></i> " + totalPrice +
+            "</td><td>" + totalWeight + " Kg</td></tr>";
+         // body.innerHTML += "<tr><td></td><td>Total Weight : </td><td>" + totalWeight + " Kg</td></tr>";
 
          document.getElementById('totalbox').innerHTML = totalWeight + " Kg for <i class='fa fa-inr'></i> " +
-         totalPrice;
+            totalPrice;
 
          body.innerHTML += "<input name='my-order-data' type='hidden' value='" + orders.join('----') + "'>";
-         body.innerHTML += "<input name='my-order-price' type='hidden' value='" +totalPrice + "'>";
-         body.innerHTML += "<input name='my-order-weight' type='hidden' value='" +totalWeight+"'>";
+         body.innerHTML += "<input name='my-order-price' type='hidden' value='" + totalPrice + "'>";
+         body.innerHTML += "<input name='my-order-weight' type='hidden' value='" + totalWeight + "'>";
 
          function myFunction(item) {
             body.innerHTML += "<tr><td>" + n + "</td><td>" + item[1] + "</td><td><i class='fa fa-inr'></i> " + item[2] *

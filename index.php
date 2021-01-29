@@ -27,15 +27,15 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-   <title>The Fresh Vegetable - Buy Fresh Vegetables Online</title>
+   <title>Urbn Farm - Buy Fresh Vegetables Online</title>
 
    <meta charset='UTF-8'>
    <meta name='keywords'
-      content='fresh vegetable,fresh veggies, fresh vegetable in bhopal, bhopal vegetable, fresh vegetable bhopal,Buy Vegetables Online, Online Vegetables, Vegetables Store, Online Vegetables Shopping, Online Vegetables Store, Online Supermarket, Free Delivery, Great Offers, Best Prices, bhopal, fresh vegetable near me, online fresh vegetable, online fresh vegetable in bhopal, bhopal best online vegetable store, online vegetable purchase, online fresh vegetable buy, harsh vishwakarma, harsh vishwakarma website, online buy vegeatble, online vegetable in bhopal, bhopal best online vegetable store, online bhopal sabzi store, buy sabzi in bhopal, online bhopal sabzi, sabzi in bhopal, bhopal sabzi, sabzi buy online'>
+      content='fresh vegetable,fresh veggies, fresh vegetable in bhopal, bhopal vegetable, fresh vegetable bhopal,Buy Vegetables Online, Online Vegetables, Vegetables Store, Online Vegetables Shopping, Online Vegetables Store,Urban Farm, Urbn Farm, Urban Farms, Online Supermarket, Free Delivery, Great Offers, Best Prices, bhopal, fresh vegetable near me, online fresh vegetable, online fresh vegetable in bhopal, bhopal best online vegetable store, online vegetable purchase, online fresh vegetable buy, harsh vishwakarma, harsh vishwakarma website, online buy vegeatble, online vegetable in bhopal, bhopal best online vegetable store, online bhopal sabzi store, buy sabzi in bhopal, online bhopal sabzi, sabzi in bhopal, bhopal sabzi, sabzi buy online'>
    <meta name='description'
       content='Buy fresh vegetables & green vegetables online at best prices and experience the ease of online shopping only at The Fresh Vegetable. Shop for potato,  beans, broccoli, tomato, onion and more online.'>
    <meta name='subject' content='Buy Fresh Vegetables Online'>
-   <meta name='copyright' content='The Fresh Vegetable'>
+   <meta name='copyright' content='Urbn Farm'>
    <meta name='language' content='ES'>
    <meta name='summary' content=''>
    <meta name='Classification' content='Business'>
@@ -43,7 +43,7 @@
    <meta name='designer' content='Harsh Vishwakarma'>
    <meta name='reply-to' content='email@hotmail.com'>
    <meta name='owner' content=''>
-   <meta name='category' content='fresh vegetable'>
+   <meta name='category' content='urbn farm'>
    <meta name='subtitle' content='This is my subtitle'>
    <meta name='date' content='Jan. 20, 2021'>
 </head>
@@ -52,7 +52,7 @@
    <div class="bodydiv">
 
       <div class="header">
-         <img class="animate__fadeInLeft animate__animated logo" src="img/logo.png" alt=" Fresh Vegetable Logo">
+         <img class="animate__fadeInLeft animate__animated logo" src="img/logo.png" alt=" Urbn Farm Logo">
          <i id="bar" class="fas fa-bars"></i>
          <div class="navigationbar">
             <a href="#home" class="animate__fadeInUp animate__animated navitem">HOME</a>
@@ -148,7 +148,7 @@
                      To be honest i never faced any trouble getting my order delivered on time. The quality they supply
                      is better than the local markets of vegetables near me. Any products if damaged is taken back and
                      the money is refunded or adjusted in next bill!! As a happy customer i'll always give 5 star for
-                     The Fresh Vegetable
+                     Urbn Farm.
                   </p>
                   <div class="userdetail">
                      <h2>Harsh</h2>
@@ -157,9 +157,9 @@
                </div>
                <div class="reviewbox">
                   <p class="review">
-                     At first i was not a regular customer of The Fresh Vegetable, recently one of my neighbor insisted me to get
+                     At first i was not a regular customer of Urban Farm, recently one of my neighbor insisted me to get
                      spinach here...Honestly, it was my first time to get fresh quality green goodness within my Area.
-                     Believe or not, now i've become a habitue of The Fresh Vegetable! Thank yuh, for delivering fresh spinach and
+                     Believe or not, now i've become a habitue of The Urban Farm! Thank yuh, for delivering fresh spinach and
                      veggies on time.</p>
 
                   <div class="userdetail">
@@ -169,7 +169,7 @@
                </div>
                <div class="reviewbox">
                   <p class="review">
-                     I really like The Fresh Vegetable Service. specially their <b>No minimum order</b> policy is too good so that
+                     I really like Urban Farm Service. specially their <b>No minimum order</b> policy is too good so that
                      i can order daily fresh vegetables and they will deiever daily on time. They are doing very good
                      and timely delivery of fresh vegetables. </p>
                   <div class="userdetail">
@@ -210,25 +210,28 @@
                <h2>Contact Us:</h2>
                <table>
                   <tr>
-                     <td><span>Phone: </span></td><td>6264295091</td>
+                     <td><span>Phone: </span></td><td>7987303675</td>
                   </tr>
                   <tr>
                      <td><span>Email: </span></td><td>random@email.com</td>
                   </tr>
                   <tr>
-                     <td><span>Address:</span> </td><td>SF-13,errgg fdf,ertt</td>
+                     <td><span>Address:</span> </td><td>Shop-09, Girnar Hills near by</td>
+                  </tr>
+                  <tr>
+                     <td></td><td>Galaxy City, Bhopal (462022)</td>
                   </tr>
                </table>
             </div>
             <div>
                <h2>About Us</h2>
-               <a href="">About</a><br>
-               <a href="">Our Group Companies</a>
+               <a href="#about">About</a><br>
+               <!-- <a href="ogc">Our Group Companies</a> -->
             </div>
             <div>
                <h2>Quick Link</h2>
-               <a href="">Testimonial</a><br>
-               <a href="">Order Now</a>
+               <a href="#testimonial">Testimonial</a><br>
+               <a href="products.php">Order Now</a>
             </div>
          </div>
          <div class="footerbottom">

@@ -20,7 +20,8 @@ window.location.replace('products.php');</script>";
    //   header('Location:index.php');
       }
 
-      $query =  "INSERT INTO `order` (`name`,`number`,`colony`,`address`,`extranote`,`orderquery`,`price`,`weight`,`paid`,`delivered`) VALUES ('".$name."','".$mobile."','".$colony."','".$address."','".$extranote."','".$data."',".$price.",".$weight.",0,0)";
+      date_default_timezone_set("Asia/Kolkata");
+      $query =  "INSERT INTO `order` (`name`,`number`,`colony`,`address`,`extranote`,`orderquery`,`price`,`weight`,`paid`,`delivered`,`date`,`time`) VALUES ('".$name."','".$mobile."','".$colony."','".$address."','".$extranote."','".$data."',".$price.",".$weight.",0,0,'".date("Y-m-d")."','".date("H:i:s")."')";
       
            if (mysqli_query($conn, $query)) {
               foreach ($products as $product) {
@@ -38,6 +39,21 @@ window.location.replace('products.php');</script>";
             $query3 =  "UPDATE `products` SET demand = ".$newdemand." WHERE id=".(int)$detail[0];
     if (mysqli_query($conn, $query3)) {
          //  $id = mysqli_insert_id($conn);
+         echo '<script>alert("Your Order is Placed Succesfully\n';
+
+
+         if(((((int)date("w"))==6) && (((int)date("H"))>=7)) || (((int)date("w"))==7) ){
+        echo 'You Order will be Delivered on Monday';
+
+         }else if(((int)date("H"))<7){
+        echo 'You Order will be Delivered Today';
+      }else{
+        echo 'You Order will be Delivered Tommorow';
+      }
+
+
+
+         echo'");window.location.replace("products.php");</script>';
     } else {
       echo "Error:  <br>" . mysqli_error($conn);
     }
