@@ -32,7 +32,25 @@
 .contactcontent>span{
    width: 70%;
 }
+
+.footertop{
+   /* flex-direction: column; */
+   justify-content: center;
+   text-align: center;
+   
+   padding :130px 30px;
+   padding-bottom: 50px;
 }
+
+.footertop div{
+   margin-bottom:50px;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+
+}
+}
+
 @media screen and (max-width: 800px) {
    .homecontent{
       margin-left: 5%;
@@ -44,7 +62,9 @@
    .homecontent>span{
       font-size:1.7em;
    }
-   
+   #about{
+      text-align: center;
+   }
 .homecontent a{
    font-size: 1em;
 }
@@ -52,22 +72,64 @@
    font-size: 1em;
 }
 .contactcontent{
-   font-size: 1.6em;
+   font-size: 2em;
 }
 .contactcontent>span{
    width: 90%;
 }
 .footertop{
-   flex-direction: column;
+   /* flex-direction: column; */
    justify-content: center;
    text-align: center;
-   padding-bottom: 50px;;
+   
+   padding :130px 10px;
+   padding-bottom: 50px;
 }
 .footertop div{
    margin-bottom:50px;
    display: flex;
    flex-direction: column;
+   flex-grow: 1;
 
+}
+
+.left-leaf{
+   width: 150px;
+}
+.right-leaf{
+   width: 150px;
+}
+#testimonial{
+   font-size: 0.8em;
+}
+}
+
+@media screen and (max-width: 600px) {
+   
+.footertop{
+   flex-direction: column;
+}
+
+   #about{
+      text-align: justify;
+   }
+   #about div h2{
+      text-align: center;
+   }
+.logo{
+width: 60px;
+}
+#bar{
+   height:60px;
+}
+.testimonialcontent{
+   background:linear-gradient(90deg, var(--lightgreen),var(--darkgreen));
+}
+}
+@media screen and (max-width: 600px) {
+   
+.contactcontent{
+   font-size: 1.6em;
 }
 
 .left-leaf{
@@ -75,5 +137,19 @@
 }
 .right-leaf{
    width: 100px;
+}
+#about{
+   padding: 100px 5vw;
+   font-size: 0.8em;
+}
+#testimonial{
+   padding: 100px 5vw;
+   font-size: 0.8em;
+}
+.aboutcontent p{
+   font-size:1.2em;
+}
+.contactcontent>span{
+   width: 150%ō;
 }
 }

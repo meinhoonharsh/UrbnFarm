@@ -134,7 +134,7 @@ function myFunction() {
 
     </tr>
    <?php
-          
+      date_default_timezone_set("Asia/Kolkata");
           
           if(isset($_GET['date'])){
     $sqlorder = "SELECT * FROM `order` WHERE `date`='".$_GET['date']."'";
@@ -146,7 +146,8 @@ function myFunction() {
     $sqlorder = "SELECT * FROM `order` WHERE `delivered`=0";
 
           }else{
-    $sqlorder = "SELECT * FROM `order`";
+            
+    $sqlorder = "SELECT * FROM `order` WHERE `date`='".date("Y-m-d")."'";
           }
     $resultorder = mysqli_query($conn, $sqlorder);
 
@@ -427,6 +428,12 @@ function openCity(cityName) {
   document.getElementById(cityName).style.display = "block";  
 }
 </script>
+<?php
+
+          if(isset($_GET['page'])){
+            echo "<script>openCity('".$_GET['page']."');</script>";
+          }
+?>
 
 
 </body>

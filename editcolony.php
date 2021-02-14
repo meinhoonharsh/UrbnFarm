@@ -22,7 +22,7 @@ if ($_GET['id'] != 0){
           $query = "UPDATE `address` SET colony = '".$name."' WHERE id=".$_GET['id'];
     if (mysqli_query($conn, $query)) {
           $id = mysqli_insert_id($conn);
-          // header("Location:edit.php?id=".$_GET['id']);
+          header("Location:dashboard.php?page=colony");
           // echo "<script>alert('Your Account has been Created successfully')</script>";
 
 
@@ -54,7 +54,7 @@ if ($_GET['id'] != 0){
 
     if (mysqli_query($conn, $query)) {
           $id = mysqli_insert_id($conn);
-          header("Location:editcolony.php?id=".$id);
+          header("Location:editcolony.php?page=colony");
           // echo "<script>alert('Your Account has been Created successfully')</script>";
 
 

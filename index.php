@@ -213,7 +213,10 @@
                      <td><span>Phone: </span></td><td>7987303675</td>
                   </tr>
                   <tr>
-                     <td><span>Email: </span></td><td>random@email.com</td>
+                     <td></td><td>7415374899</td>
+                  </tr>
+                  <tr>
+                     <td><span>Email: </span></td><td>support@urbnfarm.in</td>
                   </tr>
                   <tr>
                      <td><span>Address:</span> </td><td>Shop-09, Girnar Hills near by</td>

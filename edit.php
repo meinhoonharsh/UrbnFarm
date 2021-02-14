@@ -21,7 +21,7 @@ if ($_GET['id'] != 0){
       $img_name = str_replace("|","-",str_replace(" ","-",$name));
 
       if (move_uploaded_file($_FILES["img"]["tmp_name"], "img/products/".$img_name.".jpg")) {} else {
-        echo "Sorry, there was an error uploading your file.";
+        // echo "Sorry, there was an error uploading your file.";
       }
 
                //  $query = "INSERT INTO `products` (`name`, `hindi`, `img`, `markedprice`, `ourprice`, `exotic`, `kgunit`) VALUES ('".$name."','".$_POST['hindi']."','".$img_name.".jpg','".$_POST['markedprice']."','".$_POST['ourprice']."','".$_POST['exotic']."','".$_POST['kgunit']."')";
@@ -29,7 +29,7 @@ if ($_GET['id'] != 0){
           $query = "UPDATE `products` SET name = '".$name."', hindi = '".$_POST['hindi']."',img = '".$img_name.".jpg',markedprice = '".$_POST['markedprice']."',ourprice = '".$_POST['ourprice']."',exotic = '".$_POST['exotic']."' , kgunit='".$_POST['kgunit']."', min ='".$_POST['min']."' WHERE id=".$_GET['id'];
     if (mysqli_query($conn, $query)) {
           $id = mysqli_insert_id($conn);
-          // header("Location:edit.php?id=".$_GET['id']);
+          header("Location:dashboard.php?page=products");
           // echo "<script>alert('Your Account has been Created successfully')</script>";
 
 
@@ -57,7 +57,7 @@ if ($_GET['id'] != 0){
       $img_name = str_replace("|","-",str_replace(" ","-",$name));
 
       if (move_uploaded_file($_FILES["img"]["tmp_name"], "img/products/".$img_name.".jpg")) {} else {
-        echo "Sorry, there was an error uploading your file.";
+        // echo "Sorry, there was an error uploading your file.";
       }
 
 
@@ -69,7 +69,7 @@ if ($_GET['id'] != 0){
 
     if (mysqli_query($conn, $query)) {
           $id = mysqli_insert_id($conn);
-          header("Location:edit.php?id=".$id);
+          header("Location:dashboard.php?page=products");
           // echo "<script>alert('Your Account has been Created successfully')</script>";
 
 

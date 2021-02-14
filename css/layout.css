@@ -86,7 +86,7 @@ a:hover{
 #home{
    background-image: url(../img/banner.jpg);
    width:100vw;
-   
+   background-position: center;
    height: 100vh;
    display: flex;
    align-items: center;
@@ -156,6 +156,7 @@ a:hover{
 .aboutimage{
    display: flex;
    align-items: center;
+   justify-content: center;
 }
 .aboutimage img{
    width: 80%;
@@ -334,6 +335,7 @@ a:hover{
 .footertop{
    background-image: url(../img/product_footer_bg.png);
    background-size: cover;
+   background-position: center;
    padding:130px;
    color: var(--white);
    display: flex;
@@ -357,4 +359,7 @@ a:hover{
 }
 .footertop a:hover{
    color:var(--darkgreen);
+}
+.footertop div table tbody tr td{
+   text-align:left;
 }
