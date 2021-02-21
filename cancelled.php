@@ -21,7 +21,7 @@ else if(!isset($_SESSION['id'])){
   header("Location:login.php");
 }
 
-$sql = "UPDATE `order` SET `paid`=1 WHERE id=".$_GET['id'];
+$sql = "UPDATE `order` SET `cancelled`=1 WHERE id=".$_GET['id'];
 
 
 if (mysqli_query($conn, $sql)) {

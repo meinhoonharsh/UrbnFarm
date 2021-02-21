@@ -131,22 +131,22 @@ if (!isset($_COOKIE['id'])) {
         <th>Note</th>
         <th>Order Detail</th>
         <th>Date</th>
-        <th>Paid</th>
         <th>Delivered</th>
+        <th>Cancel</th>
 
       </tr>
       <?php
       date_default_timezone_set("Asia/Kolkata");
 
       if (isset($_GET['date'])) {
-        $sqlorder = "SELECT * FROM `order` WHERE `date`='" . $_GET['date'] . "'";
+        $sqlorder = "SELECT * FROM `order` WHERE `date`='" . $_GET['date'] . "' AND `cancelled` = 0";
       } else if (isset($_GET['paid'])) {
         $sqlorder = "SELECT * FROM `order` WHERE `paid`=0";
       } else if (isset($_GET['delivered'])) {
         $sqlorder = "SELECT * FROM `order` WHERE `delivered`=0";
       } else {
 
-        $sqlorder = "SELECT * FROM `order` WHERE `date`='" . date("Y-m-d") . "' AND (`paid` = '0' OR `delivered`= '0')";
+        $sqlorder = "SELECT * FROM `order` WHERE `date`='" . date("Y-m-d") . "' AND `cancelled` = 0";
       }
       $resultorder = mysqli_query($conn, $sqlorder);
 
@@ -185,18 +185,19 @@ if (!isset($_COOKIE['id'])) {
 </table></td>
       <td>' . $row['date'] . '</td>
       <td>';
-          if ($row['paid']) {
-            echo  "Paid";
+          if ($row['delivered']) {
+            echo '<a href="#" class="btn btn-primary"><i class="fa fa-check"></i></a>';
+
           } else {
-            echo '<a href="paid.php?id=' . $row['id'] . '"onclick="return confirm(\'Are you sure?\nPayment id Done\')"  class="btn btn-primary">PAid</a>';
+            echo '<a href="delivered.php?id=' . $row['id'] . '"onclick="return confirm(\'Are you sure?\nThis Product is Delivered\')"  class="btn btn-primary"><i class="fa fa-shipping-fast"></i></a>';
           }
           echo '</td>
       <td>';
-          if ($row['delivered']) {
-            echo  "Delivered";
+          if ($row['cancelled']) {
+            echo  "Cancelled";
           } else {
 
-            echo '<a href="delivered.php?id=' . $row['id'] . '" onclick="return confirm(\'Are you sure?\nProduct is Delivered\')" class="btn btn-primary">Delivered</a>';
+            echo '<a href="cancelled.php?id=' . $row['id'] . '" onclick="return confirm(\'Are you sure?\nYou want to Cancel this Order\')" class="btn btn-primary"><i class="fa fa-ban"></i></a>';
           }
 
           echo '</td>
@@ -379,14 +380,14 @@ if (!isset($_COOKIE['id'])) {
 
 
       if (isset($_GET['date'])) {
-        $sqlextra = "SELECT * FROM `order` WHERE `date`='" . $_GET['date'] . "'";
+        $sqlextra = "SELECT * FROM `order` WHERE `date`='" . $_GET['date'] . "' AND `cancelled` = 0";
       } else if (isset($_GET['paid'])) {
         $sqlextra = "SELECT * FROM `order` WHERE `paid`=0";
       } else if (isset($_GET['delivered'])) {
         $sqlextra = "SELECT * FROM `order` WHERE `delivered`=0";
       } else {
 
-        $sqlextra = "SELECT * FROM `order` WHERE `date`='" . date("Y-m-d") . "'";
+        $sqlextra = "SELECT * FROM `order` WHERE `date`='" . date("Y-m-d") . "' AND `cancelled` = 0";
       }
       $resultextra = mysqli_query($conn, $sqlextra);
       // echo "nextpage :".$nextpage;
@@ -469,7 +470,7 @@ if (!isset($_COOKIE['id'])) {
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-          <p class="copyright text-muted">Copyright &copy; 2020 - The Fresh Vegetables</p>
+          <p class="copyright text-muted">Copyright &copy; 2020 - Urbn Farm</p>
         </div>
       </div>
     </div>
