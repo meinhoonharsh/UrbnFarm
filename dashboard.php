@@ -400,7 +400,7 @@ if (!isset($_COOKIE['id'])) {
             $detail = explode("-", $product);
             // echo $vegetables[$detail[0]]["price"];
             $vegetables[$detail[0]]["price"]+= $detail[2] * $detail[3];
-            $vegetables[$detail[0]]["demand"] += $detail[2] * $detail[3];
+            $vegetables[$detail[0]]["demand"] += $detail[3];
   //           echo '<tr>
   //   <td>' . $detail[1] . '</td>
   //   <td>	&#8377;' . $detail[2] * $detail[3] . '</td>
