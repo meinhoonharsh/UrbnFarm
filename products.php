@@ -21,9 +21,9 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script>
+   <!-- <script>
    $('.select2').select2();
-   </script>
+   </script> -->
 
 
 
@@ -734,7 +734,6 @@ $kg = 'piece';
                <div id="cart1" class="row"
                   style="background:#FFFFFF; border-radius:3%; margin-top:6%; padding:2%; border:1px solid #00CC00">
                   <div id="jcart" style="width:100%; ">
-                     <form method='post' action='checkout.php'>
                         <fieldset>
                            <input type='hidden' name='jcartToken' value='8e94373647ebbe98202a3f9763ae1696' />
                            <table border='0' style='width:100%'>
@@ -749,7 +748,7 @@ $kg = 'piece';
                                  <tr>
                                     <th style='text-align:center' colspan='4'>
                                        <button style='margin:1% 0 1% 0' type='submit' id='jcart-checkout' name='submit'
-                                          class='form-control btn btn-success' value='submit'>CheckOut</button>
+                                          class='form-control btn btn-success' value='submit'>Submit</button>
                                     </th>
                                  </tr>
                               </tfoot>
@@ -766,7 +765,6 @@ $kg = 'piece';
                                  class='jcart-button'>Empty</button>
                            </div>
                         </fieldset>
-                     </form>
 
                      <div id='jcart-tooltip'></div>
                   </div>

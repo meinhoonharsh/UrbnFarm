@@ -12,18 +12,24 @@ $dbname = "thefreshvegetable";
 }
 else{
 $servername = "localhost";
-$username = "harshvis_123";
-$password = "thisismypassword782";
-$dbname = "harshvis_circuitreboot";
+$username = "u710282706_urbnfarm";
+$password = "ThisIsPasswordForUrbnFarm@2021";
+$dbname = "u710282706_urbnfarm";
 }
 // Create connection
 
-$conn = new mysqli($servername, $username, $password,$dbname);
+$conn = mysqli_connect($servername, $username, $password,$dbname);
 
-   // if($connway=="localhost"){
-   //  $siteurl="localhost/harshvishwakarma/bliss";
-   // }else{
-   //  $siteurl="harshvishwakarma.xyz/bliss";
+// if($connway=="localhost"){
+//  $siteurl="localhost/harshvishwakarma/bliss";
+// }else{
+//  $siteurl="harshvishwakarma.xyz/bliss";
 
-   // }
+// }
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
 ?>
