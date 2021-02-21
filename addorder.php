@@ -21,7 +21,7 @@ window.location.replace('products.php');</script>";
       }
 
       date_default_timezone_set("Asia/Kolkata");
-      $query =  "INSERT INTO `order` (`name`,`number`,`colony`,`address`,`extranote`,`orderquery`,`price`,`weight`,`paid`,`delivered`,`date`,`time`) VALUES ('".$name."','".$mobile."','".$colony."','".$address."','".$extranote."','".$data."',".$price.",".$weight.",0,0,'".date("Y-m-d")."','".date("H:i:s")."')";
+      $query =  "INSERT INTO `order` (`name`,`number`,`colony`,`address`,`extranote`,`orderquery`,`price`,`weight`,`cancelled`,`delivered`,`date`,`time`) VALUES ('".$name."','".$mobile."','".$colony."','".$address."','".$extranote."','".$data."',".$price.",".$weight.",0,0,'".date("Y-m-d")."','".date("H:i:s")."')";
       
            if (mysqli_query($conn, $query)) {
               foreach ($products as $product) {

@@ -159,7 +159,7 @@ if (!isset($_COOKIE['id'])) {
           echo ' <tr>
       <th>' . $n . '</th>
       <td>' . $row['name'] . '</td>
-      <td>' . $row['number'] . '</td>
+      <td><a href="tel:' . $row['number'] . '">' . $row['number'] . '</a></td>
       <td>' . $row['colony'] . '</td>
       <td>' . $row['address'] . '</td>
       <td>' . $row['extranote'] . '</td>
