@@ -362,7 +362,7 @@ if (!isset($_COOKIE['id'])) {
       if (mysqli_num_rows($resultdemand) > 0) {
         $n = 1;
         while ($row = mysqli_fetch_assoc($resultdemand)) {
-          $vegetables[$row['id']] = ["name" => $row['name'], "price" => 0, "demand" => 0];
+          $vegetables[$row['id']] = ["name" => $row['name']." - ".$row['hindi'], "price" => 0, "demand" => 0];
           
         }
       } else {

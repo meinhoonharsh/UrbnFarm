@@ -363,3 +363,26 @@ a:hover{
 .footertop div table tbody tr td{
    text-align:left;
 }
+
+
+
+
+#viewbox{
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+#viewbox>div:first-child{
+   background:var(--lightgreen);
+   border-radius: 15px;
+   padding: 20px;
+}
+#viewbox>div>form{
+   display: flex;
+   flex-direction: column;
+}
+#viewbox .form-control{
+   margin: 5px 0;
+}

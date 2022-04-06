@@ -212,13 +212,14 @@
          </div>
       </div>
    </section>
-
    <section class="section" style="background-color:#f6f6f6;">
       <div class="container">
          <div class="col-md-8">
 
             <div class="row">
                <div class="col-md-12">
+            
+               <a href="vieworder.php" class="btn btn-success">View Order</a>
                   <!-- Nav tabs -->
                   <div class="">
                      <ul class="nav nav-tabs" role="tablist">
